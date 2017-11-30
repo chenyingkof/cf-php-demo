@@ -1,4 +1,4 @@
-<? include 'init.php' ?>
+<?php include 'init.php';?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,17 +18,17 @@
       </tr>
     </thead>
     <tbody>
-    <? while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) { ?>
+    <?php while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) { ?>
       <tr>
-      <? foreach ($line as $col_value) { ?>
-        <td><? echo $col_value ?></td>
-      <? } ?>
+      <?php foreach ($line as $col_value) { ?>
+        <td><?php echo $col_value;?></td>
+      <?php } ?>
       </tr>
-    <? } ?>
+    <?php } ?>
     </tbody>
   </table>
   <script src="http://code.jquery.com/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
-<? include 'teardown.php' ?>
+<?php include 'teardown.php';?>

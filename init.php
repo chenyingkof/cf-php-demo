@@ -1,8 +1,8 @@
-<?
+<?php
 
 $vcap_services = json_decode($_ENV["VCAP_SERVICES"]);
 
-$db_url = $vcap_services->{'elephantsql-n/a'}[0]->credentials->uri;
+$db_url = $vcap_services->{'rdspostgres'}[0]->credentials->uri;
 
 $db_params = parse_url($db_url);
 
